@@ -1,0 +1,19 @@
+{
+    "ls": ["-f", "-F"
+        ,".docx", ".py", ".txt", ".zip", ".rar"
+        , ".xlsx", ".xls", ".rtf", ".ppt", ".pptx"
+        , ".doc", ".exe", ".dll", ".png", ".jpg"
+        , ".sql", ".bmp", ".css", ".less", ".js"
+        , ".vue", ".c", ".java", ".cpp", ".cs"
+        , ".sln", ".xml", ".json", "html", ".htm"
+    ],
+    "cd": ["***"],
+    "zip": ["***"],
+    "unzip": ["***"],
+    "rm": ["***"],
+    "mkdir": ["***"],
+    "mv": ["***"],
+    "cp": ["***"],
+    "mkfile": ["***"],
+    "ping": ["***"]
+}
