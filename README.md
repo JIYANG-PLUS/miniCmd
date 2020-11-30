@@ -33,5 +33,6 @@
     <li>ping：测试网络连接量。</li>
     <li>quit或q：退出命令行。</li>
     <li>date：获取当前时间。</li>
+    <li>django: 快速生成Django应用程序目录结构（个人完善版）。</li>
     <li>print：python3语法输出。因为本命令行的实现基于python，所以python的任何语法都能够在本黑窗口实现。</li>
 </ol>
