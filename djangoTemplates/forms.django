@@ -1,1 +1,23 @@
 from django import forms
+from .models import YourModel
+
+# 创建表单
+# 默认向模板发送【form】上下文，代表表单的内容
+"""创建表单 开始"""
+class YourForm(forms.Form):
+    name = forms.CharField(label='Your name', max_length=100)
+    message = forms.CharField(widget=forms.Textarea)
+    sender = forms.EmailField()
+    cc_myself = forms.BooleanField(required=False)
+"""创建表单 结束"""
+
+
+# 从模型继承
+"""从模型继承 开始"""
+class MyModelForm(forms.ModelForm):
+    class Meta:
+        model = YourModel
+        fields = [
+            'title','introduce','content','keywords',
+        ]
+"""从模型继承 结束"""

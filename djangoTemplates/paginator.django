@@ -1,0 +1,21 @@
+<div id="pages" class="text-center" >
+    <nav>
+        <ul class="pagination">
+            <li class="step-links">
+            {% if datas.has_previous %}
+                <a class='active' href="?page={{ datas.previous_page_number }}">上一页</a>
+            {% else %}
+                <a>上一页</a>
+            {% endif %}
+
+            <span class="current">
+            {{ datas.number }}/{{ datas.paginator.num_pages }}</span>
+            {% if datas.has_next %}
+                <a class='active' href="?page={{ datas.next_page_number }}">下一页</a>
+            {% else %}
+                <a>下一页</a>
+            {% endif %}
+            </li>
+        </ul>
+    </nav>
+</div>

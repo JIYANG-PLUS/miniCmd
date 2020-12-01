@@ -1,1 +1,44 @@
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
+# from .models import YourModelName, SubYourModelName # YourModelName 和 SubYourModelName 是一对多的关系
+
+# 简单配置
+"""简单配置 开始"""
+# admin.site.register(YourModelName)
+"""简单配置 结束"""
+
+
+# 复杂配置
+"""复杂配置 开始"""
+# class SubYourModelNameInline(admin.TabularInline):
+#     model = YourModelName # 模型
+#     extra = 6 # 关联添加子项的个数（新增编辑用）
+#     list_per_page = 5 # 分页
+
+# class YourModelNameAdmin(admin.ModelAdmin):
+#     list_display = ('name', 'get_user_article') # 显示列的列表（外键不能直接写在这里，需要放在fk_fields中）
+#     list_filter = ['name'] # 添加过滤字段
+#     search_fields = ['name'] # 添加搜索字段
+#     inlines = [SubYourModelNameInline] # 设置关联表同步显示
+#     date_hierarchy = 'create_time' # 设置日期返回选择字段
+
+#     # 复杂函数
+#     def complex_func(self, name, *args, **kwargs):
+#         """name: YourModelName 模型中的列名"""
+#         # 这里做逻辑处理
+#         return _('这里返回在前端显示的值和格式')
+
+#     complex_func.short_description = _('设置complex_func在前端显示的列名')
+
+# class SubYourModelNameAdmin(admin.ModelAdmin):
+#     fk_fields = ['YourModelName'] # 显示外键
+
+# admin.site.register(YourModelName, YourModelNameAdmin)
+# admin.site.register(SubYourModelName, SubYourModelNameAdmin)
+"""复杂配置 结束"""
+
+
+# 重命名网站名（只需在一个app中赋值一次）
+admin.site.site_title = _("login name")
+admin.site.site_header = _("backstage name")
+
