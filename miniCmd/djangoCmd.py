@@ -64,3 +64,8 @@ def startapp():
         new_file(os.path.join(APP_DIR, 'templatetags', '__init__.py'))
         new_file(os.path.join(APP_DIR, 'templatetags', 'filter.py'), content=read_file_lists('filter.django'))
         """"""
+        """""""""migrations"""
+        """"""
+        os.mkdir(os.path.join(APP_DIR, 'migrations'))
+        new_file(os.path.join(APP_DIR, 'migrations', '__init__.py'))
+        """"""
